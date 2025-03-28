@@ -3,12 +3,7 @@
   <head>
     <title>Form Validation Practice</title>
     <link rel="stylesheet" href="../styles/styles.css" />
-    <!-- Font Awesome for Icons -->
-    <script
-      src="https://kit.fontawesome.com/d8f052c6cf.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="../scripts/script.js"></script>
+    <script defer type="text/javascript" src="../scripts/script.js"></script>
   </head>
   <body>
     <!-- Container for entire form. -->
@@ -20,10 +15,10 @@
 
         <!-- Registration Form -->
         <form id="registration">
-          <input name="username" type="text" placeholder="Username" />
+          <input name="username" type="text" placeholder="Username" required minlength="4" pattern ="^(?!.*(.).*\1)[a-zA-Z0-9]{2,}$"/>
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="email" type="text" placeholder="Email" />
+          <input name="email" type="email" placeholder="Email" required/>
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
